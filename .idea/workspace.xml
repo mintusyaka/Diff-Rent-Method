@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="044e7010-065d-4f60-8577-efa7be2d3ab4" name="Changes" comment="">
+    <list default="true" id="044e7010-065d-4f60-8577-efa7be2d3ab4" name="Changes" comment="UPD: Change print Goods">
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/app/DiffRentSolverApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/models/TransportTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/models/TransportTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/solvers/DiffRentSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/solvers/DiffRentSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/solvers/DiffRentTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/solvers/DiffRentTools.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="init" />
+        <entry key="$PROJECT_DIR$" value="transport-table-model" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,9 +44,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Diff Rent Solver App.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "transport-table-model",
+    "git-widget-placeholder": "diff-rent-solver",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -53,6 +57,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Diff Rent Solver App" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="edu.app.DiffRentSolverApp" />
+      <module name="diff-rent" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -71,9 +84,49 @@
       <updated>1733577746217</updated>
       <workItem from="1733577747367" duration="2450000" />
     </task>
+    <task id="LOCAL-00001" summary="UPD: implements TransportTable model">
+      <option name="closed" value="true" />
+      <created>1733590531171</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733590531171</updated>
+    </task>
+    <task id="LOCAL-00002" summary="UPD: Add getters; Refactor TransportTable">
+      <option name="closed" value="true" />
+      <created>1733591161171</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733591161171</updated>
+    </task>
+    <task id="LOCAL-00003" summary="UPD: Add print Goods">
+      <option name="closed" value="true" />
+      <created>1733595752722</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733595752722</updated>
+    </task>
+    <task id="LOCAL-00004" summary="UPD: Change print Goods">
+      <option name="closed" value="true" />
+      <created>1733595860388</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733595860388</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="UPD: implements TransportTable model" />
+    <MESSAGE value="UPD: Add getters; Refactor TransportTable" />
+    <MESSAGE value="UPD: Add print Goods" />
+    <MESSAGE value="UPD: Change print Goods" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPD: Change print Goods" />
   </component>
 </project>

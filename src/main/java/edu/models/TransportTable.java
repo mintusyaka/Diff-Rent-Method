@@ -25,6 +25,7 @@ public class TransportTable {
     }
 
 
+
     //PRICES
     public double getPrice(int i, int j) throws RuntimeException {
         if(i >= 0 && i < priceMatrix.length && j >= 0 && j < priceMatrix[i].length)
@@ -32,12 +33,18 @@ public class TransportTable {
         else
             throw new RuntimeException("Wrong index to select price.");
     }
+
     public void setPrice(int i, int j, double value) throws RuntimeException {
         if(i >= 0 && i < priceMatrix.length && j >= 0 && j < priceMatrix[i].length)
             priceMatrix[i][j] = value;
         else
             throw new RuntimeException("Wrong index to select price.");
     }
+
+    public double[][] getPriceMatrix() {
+        return priceMatrix;
+    }
+
 
 
     //GOODS
@@ -47,12 +54,22 @@ public class TransportTable {
         else
             throw new RuntimeException("Wrong index to select goods.");
     }
+
     public void setGoods(int i, int j, int value) throws RuntimeException {
         if(i >= 0 && i < goodsMatrix.length && j >= 0 && j < goodsMatrix[i].length)
             goodsMatrix[i][j] = value;
         else
             throw new RuntimeException("Wrong index to select goods.");
     }
+
+    public int[][] getGoodsMatrix() {
+        return goodsMatrix;
+    }
+
+    public int getGoodsSum() {
+        return TransportTableTools.getGoodsSum(this);
+    }
+
 
 
     //CONSUMERS
@@ -62,12 +79,18 @@ public class TransportTable {
         else
             throw new RuntimeException("Wrong index to select consumer.");
     }
+
     public void setConsumer(int i, int value) throws RuntimeException {
         if(i >= 0 && i < consumers.length)
             consumers[i] = value;
         else
             throw new RuntimeException("Wrong index to select consumer.");
     }
+
+    public int[] getConsumers() {
+        return consumers;
+    }
+
 
 
     //PRODUCERS
@@ -77,6 +100,7 @@ public class TransportTable {
         else
             throw new RuntimeException("Wrong index to select producer.");
     }
+
     public void setProducer(int i, int value) throws RuntimeException {
         if(i >= 0 && i < producers.length)
             producers[i] = value;
@@ -84,6 +108,17 @@ public class TransportTable {
             throw new RuntimeException("Wrong index to select producer.");
     }
 
+    public int[] getProducers() {
+        return producers;
+    }
+
+    // PRINT
+    public void printGoods() {
+        for (int[] matrix : goodsMatrix) {
+            for (int i : matrix) System.out.print(i + "\t");
+            System.out.println();
+        }
+    }
 
     private static class TransportTableTools {
         private static void makeGoodsMatrixEmpty(TransportTable table) {
@@ -95,7 +130,17 @@ public class TransportTable {
                 }
             }
         }
+        private static int getGoodsSum(TransportTable table) {
+            int sum = 0;
+            for (int[] matrix : table.goodsMatrix) {
+                for (int i : matrix) sum += i;
+            }
+            return sum;
+        }
     }
+
+
+
 
 
 }
