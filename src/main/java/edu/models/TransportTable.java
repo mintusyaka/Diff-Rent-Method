@@ -121,4 +121,13 @@ public class TransportTable {
     }
 
 
+
+    // PRINT
+    public void printGoods() {
+        for (int[] matrix : goodsMatrix) {
+            for (int i : matrix) System.out.print(i + " ");
+            System.out.println();
+        }
+    }
+
 }
