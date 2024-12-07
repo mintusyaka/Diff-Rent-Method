@@ -66,6 +66,10 @@ public class TransportTable {
         return goodsMatrix;
     }
 
+    public int getGoodsSum() {
+        return TransportTableTools.getGoodsSum(this);
+    }
+
 
 
     //CONSUMERS
@@ -108,6 +112,14 @@ public class TransportTable {
         return producers;
     }
 
+    // PRINT
+    public void printGoods() {
+        for (int[] matrix : goodsMatrix) {
+            for (int i : matrix) System.out.print(i + "\t");
+            System.out.println();
+        }
+    }
+
     private static class TransportTableTools {
         private static void makeGoodsMatrixEmpty(TransportTable table) {
             table.goodsMatrix = new int[table.priceMatrix.length][table.priceMatrix[0].length];
@@ -118,16 +130,17 @@ public class TransportTable {
                 }
             }
         }
-    }
-
-
-
-    // PRINT
-    public void printGoods() {
-        for (int[] matrix : goodsMatrix) {
-            for (int i : matrix) System.out.print(i + "\t");
-            System.out.println();
+        private static int getGoodsSum(TransportTable table) {
+            int sum = 0;
+            for (int[] matrix : table.goodsMatrix) {
+                for (int i : matrix) sum += i;
+            }
+            return sum;
         }
     }
+
+
+
+
 
 }
